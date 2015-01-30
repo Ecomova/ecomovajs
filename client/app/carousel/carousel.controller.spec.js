@@ -3,7 +3,7 @@
 describe('Controller: CarouselCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('fullStackApp'));
+  beforeEach(module('ecomovaJsApp'));
 
   var CarouselCtrl, scope;
 
