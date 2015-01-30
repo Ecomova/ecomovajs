@@ -1,0 +1,13 @@
+ <div ng-controller="CarouselCtrl" id="carousel-container" class=""> 	
+    <carousel interval="myInterval">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img class="img-responsive main-carousel" ng-src="{{slide.image}}">
+        <div class="carousel-caption">
+        	<div class="animated zoomIn carousel-text-container"> 
+	        	<h1 class="">{{slide.header}}</h1>
+	            <p class="">{{slide.text}}</p>
+            </div>
+        </div>
+      </slide>
+    </carousel>
+</div>
