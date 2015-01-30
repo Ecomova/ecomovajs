@@ -15,24 +15,13 @@
     padding: 0.2em 0;
 }
 
-body{	
-	font-size: 16px;	
-	font-weight: 400;
-	font-family: 'Lato', sans-serif;
-	margin-top: 75px;
-	.btn{
-		border-radius: 0px;
-	}
-}
-
-
-
-
 // injector
 @import 'account/login/login.less';
 @import 'admin/admin.less';
+@import 'carousel/carousel.less';
 @import 'contact/contact.less';
 @import 'footer/footer.less';
 @import 'main/main.less';
+@import 'navbar/navbar.less';
 @import 'modal/modal.less';
 // endinjector

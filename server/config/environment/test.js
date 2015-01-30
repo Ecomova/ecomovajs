@@ -5,6 +5,6 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/fullstack-test'
+    uri: 'mongodb://localhost/ecomovajs-test'
   }
 };
