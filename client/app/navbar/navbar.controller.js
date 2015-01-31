@@ -7,10 +7,13 @@ angular.module('ecomovaJsApp')
       'link': '/'
     },{
       'title': 'Como funciona',
-      'link': '#about'
+      'link': '#jumbotron-container'
+    },{
+      'title': 'Características',
+      'link': '#services-container'
     },{
       'title': 'Contato',
-      'link': '#contact'
+      'link': '#contact-container'
     }];
 
     $scope.isCollapsed = true;
