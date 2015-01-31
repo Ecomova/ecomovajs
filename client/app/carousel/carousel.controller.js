@@ -2,7 +2,7 @@
 
 angular.module('ecomovaJsApp')
   .controller('CarouselCtrl', function ($scope) {
-    $scope.interval = 2000;
+    $scope.interval = 100000;
   	$scope.slides = [{
   		image: 'assets/images/bg1.jpg',
   		text: 'todos os dias',
