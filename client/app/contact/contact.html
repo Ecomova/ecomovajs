@@ -6,7 +6,7 @@
         <div ng-include="'components/separator/separator.html'"></div>
       </div>                            
        <div class="container-fluid">    
-        <p  ng-class="result" class="contact_success_box" style="display:none;">{{ resultMessage }}</p>                
+        <p  ng-class="result" class="contact-success-box" style="display:none;">{{ resultMessage }}</p>                
         <form class="form-horizontal contact" id="contact-form" name="contact-form" ng-submit="submit(contact-form)" novalidate>
           <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
             <label for="contact_names" class="col-sm-3 control-label hidden-xs">Nome Completo*</label>
