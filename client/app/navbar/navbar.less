@@ -1,3 +1,5 @@
+@import '../variables.less';
+
 .navbar-ecomova{
 	
 	background-color: rgba(255, 255, 255, 1);
@@ -34,7 +36,7 @@
 
 				&:hover, 
 				&:focus {
-					color: #a3cd55;
+					color: @color-base;
 					-webkit-transition: all 0.5s ease;
 					-moz-transition: all 0.5s ease;
 					-o-transition: all 0.5s ease;
@@ -46,7 +48,7 @@
 
 			&.active{
 				a{
-					color: #a3cd55;
+					color: @color-base;
 					-webkit-transition: all 0.5s ease;
 					-moz-transition: all 0.5s ease;
 					-o-transition: all 0.5s ease;
@@ -62,11 +64,11 @@
 
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #a3cd55;
+	color: @color-base;
 	background-color: inherit;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-	color: #a3cd55;
+	color: @color-base;
 	background-color: transparent;
 }

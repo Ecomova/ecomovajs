@@ -1,10 +1,17 @@
  <section ng-controller="CarouselCtrl" id="carousel-container"> 	
  	<carousel interval="interval">
       <slide ng-repeat="slide in slides" active="slide.active">
-        <img class="img-responsive main-carousel" ng-src="{{slide.image}}"/>
+        <img class="img-responsive main-carousel" ng-src="{{slide.backgroundImage}}"/>
         <div class="carousel-caption">
-          <h4>Slide {{$index}}</h4>
-          <p>{{slide.text}}</p>
+        	<div class="row">
+        		<div class="col-sm-6 col-xs-12">
+          			<h4>Slide {{$index}}</h4>
+          			<p>{{slide.text}}</p>
+          		</div>	
+          		<div class="col-sm-6 hidden-xs">
+          			<img class="img-responsive" ng-src="{{slide.image}}"/>
+          		</div>
+          	</div>
         </div>
       </slide>
     </carousel>
