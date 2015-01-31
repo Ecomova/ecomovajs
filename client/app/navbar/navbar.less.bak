@@ -1,18 +1,16 @@
 .navbar-ecomova{
-	
-	background-color: rgba(255, 255, 255, 0.95);
+	background-color: white;
 	padding: 10px 0px;
 	height: 90px;
 
 	
 	.navbar-ecomova-container{
 		height: 69px;	
-		margin-top: 10px;
 	}
 
 	.navbar-nav{
 		li{
-			a{			
+			a{
 				display: inline-block;
 				text-align: center;
 				line-height: 18px;
@@ -21,14 +19,6 @@
 				-o-transition: all 0.5s ease;
 				transition: all 0.5s ease;
 				color: #454545;
-
-				&::hover {
-					color: #a3cd55;
-					-webkit-transition: all 0.5s ease;
-					-moz-transition: all 0.5s ease;
-					-o-transition: all 0.5s ease;
-					transition: all 0.5s ease;
-				}
 			}
 		}
 
