@@ -12,7 +12,7 @@
     <div collapse="isCollapsed" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-            <a ng-href="{{item.link}}">{{item.title}}</a>
+            <a ng-click="collapse(true)" ng-href="{{item.link}}">{{item.title}}</a>
         </li>
        <!-- 
         <li ng-show="isAdmin()"><a href="/admin">Admin</a></li>

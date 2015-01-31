@@ -21,6 +21,12 @@ angular.module('ecomovaJsApp')
     $scope.isAdmin = Auth.isAdmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
 
+    $scope.collapse = function(collapse) {
+       $scope.isCollapsed = collapse;
+    };
+
+
+
     $scope.logout = function() {
       Auth.logout();
       $location.path('/login');
