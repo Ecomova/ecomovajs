@@ -1,4 +1,4 @@
-<div class="jumbotron" ng-controller="JumbotronCtrl" >
+<section id="jumbotron-container" class="jumbotron" ng-controller="JumbotronCtrl" >
   <div class="container">
     <div class="row">
     	<div class="col-sm-5 hidden-xs">
@@ -12,7 +12,7 @@
 		    </div>
            <div ng-repeat="item in items" class="row">
             <div class="col-sm-1 col-xs-3">
-                <img src="{{item.image}}">
+                <img src="{{item.image}}"/>
             </div>
             <div class="col-sm-11 col-xs-9">
                 <h4>{{item.text}}</h4>
@@ -21,7 +21,7 @@
         </div>
 	</div>
   </div>
-</div>
+</section>
     
-<div class="row green-container">
+<div class="green-container">
 </div>
