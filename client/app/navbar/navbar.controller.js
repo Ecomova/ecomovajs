@@ -27,6 +27,11 @@ angular.module('ecomovaJsApp')
     };
 
     $scope.isActive = function(route) {
-      return route === $location.path();
+      var path = $location.hash();
+      
+      if(path === '' && route === '/')
+        return true;
+
+      return route === ('#'+ $location.hash());
     };
   });
