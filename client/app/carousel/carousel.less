@@ -9,22 +9,40 @@
 
 		&.background-cover{
 			background-size: cover;		
-		}
+			&.background-cover-everyday{
+				background-image: url('../assets/images/bg1.jpg');
+			}
 
-		
+			&.background-cover-college{
+				background-image: url('../assets/images/bg2.jpg');
+			}
 
-		.carousel-caption{
-			left: 0px;
-			bottom: -20px;
-			padding-bottom: 0px;
-			
-			.carousel-text-container{
-			  	animation-duration: 3s;
-  				animation-delay: 1s;
-  				animation-iteration-count: infinite;
+			&.background-cover-work{
+				background-image: url('../assets/images/bg3.jpg');
 			}
 		}
  	}
+
+ 	.carousel-caption{
+ 		
+		.carousel-row{
+			position: relative;
+
+
+			p{
+				font-size: 80px;
+				text-align: left;
+
+				&.first-line{
+					font-weight: 100;
+
+				}
+				&.second-line{
+					font-weight: 500;
+				}
+			}
+		}
+	}
 
 
  	.carousel-indicators
@@ -36,14 +54,3 @@
  	}
  }
 
- .background-everyday{
-			background-image: url('../assets/images/bg1.jpg');
-		}
-		
-		.background-college{
-			background-image: url('../assets/images/bg2.jpg');
-		}
-
-		.background-work{
-			background-image: url('../assets/images/bg3.jpg');
-		}
