@@ -1,25 +1,21 @@
 <section id="jumbotron-container" class="jumbotron" ng-controller="JumbotronCtrl" >
-  <div class="container">
-    <div class="row">
-    	<div class="col-sm-5 hidden-xs">
-	    	<img src="assets/images/iphone2.jpg" alt="picture" class="img-responsive">	           
-	    </div>
-	    <div class="col-xs-12 col-sm-7 jumbotron-container-list">
-	    	<div class="row">
-	    		<div class="col-xs-12">
-		    		<h1>Como funciona:</h1>
-		    	</div>		
-		    </div>
-           <div ng-repeat="item in items" class="row">
-            <div class="col-sm-1 col-xs-3">
-                <img src="{{item.image}}"/>
-            </div>
-            <div class="col-sm-11 col-xs-9">
-                <h4>{{item.text}}</h4>
-            </div>
-          </div>
+  <div class="row">
+  	<div class="col-md-6 hidden-xs hidden-sm">
+    	<img src="assets/images/iphone2.jpg" alt="picture" class="img-responsive">	           
+    </div>
+    <div class="col-xs-12 col-md-6 jumbotron-container-list">
+    	<div class="row">
+    		<div class="col-xs-12">
+      		<h1>Como funciona:</h1>
+      	</div>		
+      </div>
+      <div ng-repeat="item in items" class="row">
+        <div class="col-xs-12 image-container">
+            <img class="center-block" src="{{item.image}}"/>
+            <h3>{{item.text}}</h3>
         </div>
-	</div>
+      </div>
+    </div>
   </div>
 </section>
     

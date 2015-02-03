@@ -4,8 +4,16 @@
  	.main-carousel{
  		margin: auto;
  		width: 100%;
-		max-height: 700px;
-		min-height: 240px;
+ 		height: 25em;
+
+		@media (min-width: @screen-md-min) { 
+			height: 32em;	
+		}
+
+		@media (min-width: @screen-lg-min) { 
+			height: 36em;	
+		}
+		
 
 		&.background-cover{
 			background-size: cover;		
@@ -23,14 +31,11 @@
 		}
  	}
 
- 	.carousel-caption{
- 		
+ 	.carousel-caption{ 		
 		.carousel-row{
 			position: relative;
-
-
 			p{
-				font-size: 80px;
+				font-size: 4em;
 				text-align: left;
 
 				&.first-line{
@@ -44,11 +49,10 @@
 		}
 	}
 
-
  	.carousel-indicators
  	{
  		>li{
- 			margin: 10px;
+ 			margin: 0.7em;
  		}
 
  	}

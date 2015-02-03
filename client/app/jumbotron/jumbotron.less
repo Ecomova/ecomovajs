@@ -4,9 +4,10 @@
 
 	&.jumbotron{
 	 	background-color: white;
-	 	padding-bottom: 0px;
-	 	margin-bottom: 0px;
-	 	padding-top: 130px;
+
+	 	margin-bottom: 0em;
+	 	margin-left: 5%;
+	 	padding: 7em 2em 0em 2em;
 
 	 	h1,
 	 	h2,
@@ -14,23 +15,39 @@
 	 	h4,
 	 	h5{
 	 		font-weight: 300;
+	 		text-align: center;
+			@media (min-width: @screen-sm-min) { 
+				text-align: left;
+			}
 	 	}
 
 	 	h1{
-	 		font-size: 40px;
+	 		font-size: 2.5em;
+	 		margin-top: 0em;
+	 		margin-bottom: 1em;
 	 	}
 
-	 	h4{
-	 		margin: 15px 20px;
-	 	}
 
 	 	.jumbotron-container-list{
-	 		padding-left: 50px;
+	 		.image-container{
+	 			margin: 1em 0em;
+	 			padding: 0em;
+	 			img{
+					@media (min-width: @screen-sm-min) { 
+						margin: 0.5em 0em;		 	
+						float: left;
+						display: inline-block;
+						vertical-align: middle;
+					}
+	 			}
 
-	 		.row{
-	 			padding-bottom: 30px;
-	 		}
+ 				h3{
+		 			margin: 1em 0em;		 			
+		 			display: inline-block;
+		 			vertical-align: middle;
+				}
 
+			}
 	 	}	
 	}
  }
