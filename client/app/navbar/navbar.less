@@ -5,11 +5,19 @@
 	background-color: rgba(255, 255, 255, 1);
 	padding: 10px 0px;
 	height: 90px;
+	border-bottom: 0.1em solid #a3cd55;
+
 
 	
 	.navbar-ecomova-container{
 		height: 69px;	
 		margin-top: 10px;
+		.navbar-collapse{
+			padding: 0px;
+			@media (min-width: @screen-sm-min) { 
+				border-top: none;
+			}
+		}
 	}
 
 	.navbar-toggle{
@@ -20,6 +28,7 @@
 	}
 
 	.navbar-nav{
+		margin: 0px;
 		li{
 			background-color: rgba(255, 255, 255, 0.95);
 
@@ -27,32 +36,36 @@
 				display: inline-block;
 				text-align: center;
 				line-height: 18px;
-				-webkit-transition: all 0.5s ease;
-				-moz-transition: all 0.5s ease;
-				-o-transition: all 0.5s ease;
-				transition: all 0.5s ease;
 				color: #454545;
 				width: 100%;
+				font-size: 1.25em;
+				@media (min-width: @screen-sm-min) { 
+					font-size: 1em;
+				}
 
 				&:hover, 
 				&:focus {
-					background-color: @color-base;
-					-webkit-transition: all 0.9s ease;
-					-moz-transition: all 0.9s ease;
-					-o-transition: all 0.9s ease;
-					transition: all 0.9s ease;
+					background-color: @color-base;										
 					color: white;
-				}
+					@media (min-width: @screen-md-min) { 
+						-webkit-transition: all 0.9s ease;
+						-moz-transition: all 0.9s ease;
+						-o-transition: all 0.9s ease;
+						transition: all 0.9s ease;
+					}
+				}				
 
 			}
-
+			
 			&.active{
 				a{
 					color: @color-base;
-					-webkit-transition: all 0.5s ease;
-					-moz-transition: all 0.5s ease;
-					-o-transition: all 0.5s ease;
-					transition: all 0.5s ease;
+					media (min-width: @screen-md-min) { 
+						-webkit-transition: all 0.9s ease;
+						-moz-transition: all 0.9s ease;
+						-o-transition: all 0.9s ease;
+						transition: all 0.9s ease;
+					}
 					&:hover, 
 					&:focus {
 						color: white;

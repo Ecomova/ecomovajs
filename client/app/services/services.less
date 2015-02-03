@@ -1,10 +1,7 @@
 @import '../variables.less';
 
  #services-container{
-
- 	.container{
- 		padding-top: 30px;
- 	}
+ 	padding: 7em 2em 0em 2em;
 
 	.services-title{
 		color: #454545;
@@ -12,26 +9,29 @@
 
 	.thumbnail{
 		border: none;
-		text-align: center;
-		
+		text-align: center;		
 	}
 
 	.caption{
 
 		h3{
 			text-transform: uppercase;
+			font-size: 1.5em;
 		}
 
-		p{
-			font-size: 16px;
-			line-height: 24px;
+		p{		
+			font-size: 1.25em;			
+			@media (min-width: @screen-sm-min) { 
+				font-size: 1em
+			}
+			line-height: 1.5em;
 			font-family: 'Lato', sans-serif;
 			font-weight: 300;
 			color: #757575;
 		}
 
 		background-color: #f4f4f4;
-		border-bottom: 1px solid #e4e4e4;
-		padding: 30px 20px 20px 20px;
+		border-bottom: 0.1em solid #e4e4e4;
+		padding: 3em 2m 2m 2m;
 	}
  }
