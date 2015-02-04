@@ -20,10 +20,26 @@ if(config.seedDB) { require('./config/seed'); }
 // Setup server
 var app = express();
 var server = require('http').createServer(app);
+var mailer = require('express-mailer');
 var socketio = require('socket.io')(server, {
   serveClient: (config.env === 'production') ? false : true,
   path: '/socket.io-client'
 });
+
+ 
+mailer.extend(app, {
+  from: 'no-reply@ecomova.com',
+  host: 'smtp.gmail.com', // hostname 
+  secureConnection: true, // use SSL 
+  port: 465, // port for secure SMTP 
+  transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts 
+  auth: {
+    user: 'henrique.elias@ecomova.com',
+    pass: 'cobige@4'
+  }
+});
+
+
 require('./config/socketio')(socketio);
 require('./config/express')(app);
 require('./routes')(app);

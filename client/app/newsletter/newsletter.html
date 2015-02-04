@@ -1,4 +1,4 @@
-<section id="newsletter-container">
+<section id="newsletter-container" ng-controller="NewsletterCtrl">
 	<div class="newsletter-container">
 		<div class="container">
 	        <div class="row">
@@ -9,13 +9,14 @@
 	                <div class="newsletter-info row">
 	                    <h2>Newsletter</h2>
 	                    <p>Inscreva-se e fique por dentro das nossas do Ecomova.</p>
-	                    <p class="newsletter-success-box" style="display:none;">Recebemos sua inscrição! Fique atento as novidades.</p>
-	                    <form id="newsletter-form" class="newsletter-form row" method="post" >
+	                    <p class="newsletter-success-box" ng-class="submitSuccessfull">Recebemos sua inscrição! Fique atento as novidades.</p>
+	                    <p class="newsletter-error-box" ng-class="submitError">{{ errorMessage }}</p>
+	                    <form id="newsletter-form" class="newsletter-form row" method="post" name="newsletterForm" >
 	                    	<div class="col-sm-9 col-xs-12">
-	                        	<input class="input-lg" id="email-newsletter" type="email" required="" name="newsletter-email" placeholder="Digite seu e-mail">  
+	                        	<input class="input-lg" id="email-newsletter" type="email" required name="newsletter-email" placeholder="Digite seu e-mail" ng-model="user.email" ng-pattern="/^\d+$/">  
 	                        </div>
 	                        <div class="col-sm-3 col-xs-12">
-	                        	<input class="btn" type="submit" value="Assinar" id="submit-button-newsletter">
+	                        	<input class="btn" type="submit" value="Assinar" id="submit-button-newsletter" ng-click="">
 	                        </div>
 	                    </form>      
 	                </div>
