@@ -1,7 +1,6 @@
-   'use strict';
+'use strict';
 
-angular.module('ecomovaJsApp')
-  .controller('ServicesCtrl', function ($scope) {
+ecomova.controller('ServicesCtrl', function ($scope) {
 	  $scope.items = [{
 	  		image: 'assets/images/carac1.jpg',
 	  		title: 'Flexível',

@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('ecomovaJsApp')
-  .controller('NavbarCtrl', function ($scope, $location, Auth) {
+ecomova.controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',
       'link': '/'

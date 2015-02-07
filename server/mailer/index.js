@@ -17,7 +17,8 @@ router.get('/',  function (req, res, next) {
         res.send('There was an error sending the email');
         return;
       }
-      returns.send('Email Sent');
+      res.send('Email Sent');
+      return;
     });
   });
 

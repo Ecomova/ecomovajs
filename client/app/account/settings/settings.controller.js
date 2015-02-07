@@ -1,9 +1,7 @@
 'use strict';
 
-angular.module('ecomovaJsApp')
-  .controller('SettingsCtrl', function ($scope, User, Auth) {
+ecomova.controller('SettingsCtrl', ['$scope', 'User', 'Auth', function($scope, User, Auth) {
     $scope.errors = {};
-
     $scope.changePassword = function(form) {
       $scope.submitted = true;
       if(form.$valid) {
@@ -18,4 +16,4 @@ angular.module('ecomovaJsApp')
         });
       }
 		};
-  });
+  }]);

@@ -1,7 +1,6 @@
  'use strict';
 
-angular.module('ecomovaJsApp')
-  .controller('ContactCtrl', function ($scope, Auth, $location, $window) {
+ecomova.controller('ContactCtrl', function ($scope, Auth, $location, $window) {
     $scope.user = {};
     $scope.errors = {};
 

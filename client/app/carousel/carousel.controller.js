@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('ecomovaJsApp')
-  .controller('CarouselCtrl', function ($scope) {
+ecomova.controller('CarouselCtrl', [ '$scope', function ($scope) {
     $scope.interval = 100000;
   	$scope.slides = [{
   		backgroundClass: 'background-cover-everyday',
@@ -21,4 +20,4 @@ angular.module('ecomovaJsApp')
   		text: 'o trabalho',
   		header: 'Caronas para'
   	}];
-  });
+  }]);

@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('ecomovaJsApp')
-  .config(function ($stateProvider) {
+ecomova.config(function ($stateProvider) {
     $stateProvider
       .state('admin', {
         url: '/admin',

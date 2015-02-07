@@ -1,7 +1,6 @@
-  'use strict';
+'use strict';
 
-angular.module('ecomovaJsApp')
-  .controller('JumbotronCtrl', function ($scope) {
+ecomova.controller('JumbotronCtrl', function ($scope) {
 	  $scope.items = [{
 	  		image: 'assets/images/icon01.png',
 	  		text: 'Encontre uma dupla ou agende uma viagem;'

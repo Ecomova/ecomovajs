@@ -9,14 +9,24 @@
 	                <div class="newsletter-info row">
 	                    <h2>Newsletter</h2>
 	                    <p>Inscreva-se e fique por dentro das nossas do Ecomova.</p>
-	                    <p class="newsletter-success-box" ng-class="submitSuccessfull">Recebemos sua inscrição! Fique atento as novidades.</p>
-	                    <p class="newsletter-error-box" ng-class="submitError">{{ errorMessage }}</p>
-	                    <form id="newsletter-form" class="newsletter-form row" method="post" name="newsletterForm" >
-	                    	<div class="col-sm-9 col-xs-12">
-	                        	<input class="input-lg" id="email-newsletter" type="email" required name="newsletter-email" placeholder="Digite seu e-mail" ng-model="user.email" ng-pattern="/^\d+$/">  
+	                    
+	                    <p class="newsletter-success-box" ng-show="showSuccessfullMessage()" ng-class="submitSuccessfull">Recebemos sua inscrição! Fique atento as novidades.</p>
+	                    <p class="newsletter-error-box" ng-show="showErrorMessage()" ng-class="submitError">{{ error.errorMessage }}</p>
+
+
+	                    <form id="newsletter-form" class="newsletter-form row" method="post" name="newsletterForm" novalidate ng-submit="register(user)">
+	                    	
+	                    	<div class="col-sm-9 col-xs-12" ng-class="{'has-error': newsletterForm.newsletteremail.$invalid && !newsletterForm.newsletteremail.$pristine }">
+	                        	<input class="input-lg" id="email-newsletter" type="email" required name="newsletteremail" placeholder="Digite seu e-mail" ng-model="user.email" ng-pattern="/^\d+$/"/>  
+
+	                        	 <div class="help-block">
+								    <p ng-message="required">Obrigatório o preenchimento do e-mail.</p>
+								    <p ng-message="email">Preencha com um e-mail válido.</p>
+								 </div>
 	                        </div>
+
 	                        <div class="col-sm-3 col-xs-12">
-	                        	<input class="btn" type="submit" value="Assinar" id="submit-button-newsletter" ng-click="">
+	                        	<input class="btn" type="submit" value="Assinar" id="submit-button-newsletter" />
 	                        </div>
 	                    </form>      
 	                </div>

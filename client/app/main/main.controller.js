@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('ecomovaJsApp')
-  .controller('MainCtrl', function ($scope, $http, socket) {
+ecomova.controller('MainCtrl', function ($scope, $http, socket) {
     $scope.awesomeThings = [];
 
     $http.get('/api/things').success(function(awesomeThings) {

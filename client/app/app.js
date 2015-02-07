@@ -1,22 +1,21 @@
 'use strict';
 
-angular.module('ecomovaJsApp', [
+var ecomova = angular.module('ecomovaJsApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap'
-])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
-    $urlRouterProvider
-      .otherwise('/');
+]);
 
+ecomova.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+    $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('authInterceptor');
-  })
+  });
 
-  .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
+ecomova.factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
     return {
       // Add authorization token to headers
       request: function (config) {
@@ -40,9 +39,9 @@ angular.module('ecomovaJsApp', [
         }
       }
     };
-  })
+  });
 
-  .run(function ($rootScope, $location, Auth) {
+ecomova.run(function ($rootScope, $location, Auth) {
     // Redirect to login if route requires auth and you're not logged in
     $rootScope.$on('$stateChangeStart', function (event, next) {
       Auth.isLoggedInAsync(function(loggedIn) {

@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('ecomovaJsApp')
-  .controller('SignupCtrl', function ($scope, Auth, $location, $window) {
+ecomova.controller('SignupCtrl', ['$scope', 'Auth', '$location', '$window',  function ($scope, Auth, $location, $window) {
     $scope.user = {};
     $scope.errors = {};
 
@@ -34,4 +33,4 @@ angular.module('ecomovaJsApp')
     $scope.loginOauth = function(provider) {
       $window.location.href = '/auth/' + provider;
     };
-  });
+  }]);
