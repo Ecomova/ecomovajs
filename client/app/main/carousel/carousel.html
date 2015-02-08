@@ -1,28 +1,18 @@
  <section ng-controller="CarouselCtrl" id="carousel-container" > 	
- 	<carousel interval="interval" class="hidden-xs">
+ 	<carousel interval="interval">
       <slide ng-repeat="slide in slides" active="slide.active">
-        <img class="img-responsive main-carousel background-cover {{slide.backgroundClass}}" ng-src="{{slide.image}}"/>
+        <img class="img-responsive main-carousel background-cover" ng-src="{{slide.background}}"/>
         <div class="carousel-caption">
         	<div class="row carousel-row">
-        		<div class="col-sm-12" >            
+        		<div class="col-xs-12 col-md-6 carousel-text" >            
           			<p class="first-line">{{slide.header}}</p>
           			<p class="second-line">{{slide.text}}</p>
           	</div>	
+            <div class="col-xs-12 col-md-6 carousel-image" >            
+                <img class="img-responsive image-cover" ng-src="{{slide.image}}"/>
+            </div>  
           </div>
         </div>
       </slide>
-  </carousel>
-  <div class="visible-block hidden-sm hidden-md hidden-lg">
-    <div ng-repeat="slide in slides">
-      <div class="container">
-        <div class="row">      
-            <img class="img-responsive main-carousel background-cover {{slide.backgroundClass}}" ng-src="{{slide.image}}"/>
-            <div class="caption">
-              <p class="first-line">{{slide.header}}</p>
-              <p class="second-line">{{slide.text}}</p>        
-            </div>
-        </div>
-       </div>
-    </div>
-  </div>
+  </carousel>  
 </section>
