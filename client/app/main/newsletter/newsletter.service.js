@@ -2,9 +2,9 @@
 
 ecomova.service('NewsletterService', ['$resource',
 	function NewsletterService($resource) {
-		return $resource('/newsletter', {
+		return $resource('/newsletter', null, {
 			'registerEmail': {
 				method: 'POST'
-			}		
-		});
+			}	
+      });
   	}]);

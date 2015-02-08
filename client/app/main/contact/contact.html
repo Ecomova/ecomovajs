@@ -1,0 +1,67 @@
+<section id="contact-container"  ng-controller="ContactCtrl" >        
+    <div class="container">
+      <div class="title-container">
+        <h3 class="services-title">Contato</h3>
+        <div ng-include="'app/separator/separator.html'"></div>
+      </div>                            
+      <div class="container-fluid">    
+        <p class="help-block centered" ng-show="showSuccessfullMessage">  Recebemos sua mensagem! Entraremos em contato!.</p>
+        <p class="help-block centered" ng-show="showErrorMessage" >
+          {{ contactForm.$error.message }}
+        </p>                      
+        <form class="form-horizontal contact" id="contact-form" name="contactForm" novalidate method="post" ng-submit="sendMessage(user)" ng-show="showForm">
+        
+          <div class="form-group">
+            <label for="contact_names" class="col-sm-3 control-label hidden-xs">Nome Completo*</label>
+            
+            <div class="col-sm-9">
+              <input class="contact-input white-input form-control" type="text" required id="contact-name" name="name" placeholder="Nome Completo" ng-model="user.name" ng-blur="showValidationMessage('name')">                
+              <div ng-show="showValidationMessage('name')" ng-messages="contactForm.name.$error" class="help-block">
+                <p ng-message="required">Obrigatório o preenchimento do nome</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="contact-email" class="col-sm-3 control-label hidden-xs">E-mail*</label>
+            <div class="col-sm-9">
+              <input type="email" required class="form-control" id="contact-email" placeholder="E-mail" name="email" ng-model="user.email" ng-blur="showValidationMessage('email')"/>
+              <div ng-show="showValidationMessage('email')" ng-messages="contactForm.email.$error" class="help-block">
+                <p ng-message="required">Obrigatório o preenchimento do e-mail.</p>
+                <p ng-message="email">Preencha com um e-mail válido.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+              <textarea class="contact-commnent white-input" rows="2" cols="20" name="message" required placeholder="Escreva aqui sua mensagem..." ng-model="user.message" ng-blur="showValidationMessage('message')"></textarea>
+
+              <div ng-show="showValidationMessage('message')" ng-messages="contactForm.message.$error" class="help-block">
+                <p ng-message="required">Obrigatório o preenchimento da mensagem.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+          <label for="newsletter" class="col-sm-3 control-label">Receber Newsletter</label>
+            <div class="col-sm-9">
+              <div class="checkbox">
+                <label>
+                  <input id="newsletter" type="checkbox" ng-model="user.newsletter"> 
+                </label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+              <input type="submit" value="Enviar" id="submit-button" class="btn btn-contact-submit btn-block"  ng-disabled="submitButtonDisabled">
+          </div>
+        </form>                               
+      </div>            
+    </div>
+</section>

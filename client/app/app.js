@@ -2,6 +2,7 @@
 
 var ecomova = angular.module('ecomovaJsApp', [
   'ngCookies',
+  'ngMessages',
   'ngResource',
   'ngSanitize',
   'btford.socket-io',

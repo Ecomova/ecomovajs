@@ -1,0 +1,35 @@
+<section id="newsletter-container" ng-controller="NewsletterCtrl">
+	<div class="newsletter-container">
+		<div class="container">
+	        <div class="row">
+	            <div class="col-sm-3 hidden-xs newsletter-image-column">
+	                <i class="email_icon pull-right"></i>
+	            </div>
+	            <div class="col-sm-8">
+	                <div class="newsletter-info row">
+	                    <h2>Newsletter</h2>
+	                    <p>Inscreva-se e fique por dentro das novidade sobre a Ecomova.</p>
+	                    
+	                    <p class="newsletter-success-box" ng-show="showSuccessfullMessage() && !isFormSubmitted()" ng-class="submitSuccessfull">Recebemos sua inscrição! Fique atento as novidades.</p>
+	                    <p class="newsletter-error-box" ng-show="showErrorMessage()" ng-class="submitError">
+	                    	{{ newsletterForm.$error.message }}
+	                    </p>	                    
+	                    <form id="newsletter-form" class="newsletter-form row" method="post" name="newsletterForm" novalidate ng-submit="register(email)" ng-show="showForm()">	                    	
+	                    	<div class="col-sm-9 col-xs-12">
+	                        	<input class="input-lg" id="email-newsletter" type="email" required name="newsletteremail" placeholder="Digite seu e-mail" ng-model="user.email" ng-change="enableSubmitButton()"/>  
+	                        	 <div ng-show="newsletterForm.$submitted" ng-messages="newsletterForm.newsletteremail.$error" class="help-block">
+								    <p ng-message="required">Obrigatório o preenchimento do e-mail.</p>
+								    <p ng-message="email">Preencha com um e-mail válido.</p>
+								 </div>
+	                        </div>
+
+	                        <div class="col-sm-3 col-xs-12">
+	                        	<input class="btn" type="submit" value="Assinar" id="submit-button-newsletter"  ng-disabled="submitButtonDisabled"/>
+	                        </div>
+	                    </form>      
+	                </div>
+	            </div>
+		    </div>        
+		</div>	
+	</div>
+</section>

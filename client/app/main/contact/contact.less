@@ -1,24 +1,10 @@
-@import '../variables.less';
+@import '../../variables.less';
 
 #contact-container{
 	color: #ddd;
 	background-color: #393f43;
 	padding: 6em 2em 2em 2em;
 	
-	.separator_wrapper {
-		display: block;
-		margin: 12px 0 15px 0;
-		&::after, &::before {
-			background-color: #34b1c4;
-			display: inline-block;
-			vertical-align: middle;
-			content: "";
-			width: 70px;
-			height: 1px;
-			margin-top: -6px;
-		}
-	}
-
 	.title-container{
 		.services-title{
 			margin-top: -20px;
@@ -26,9 +12,21 @@
 	}
 
 	.container-fluid{
-		marign-bottom: 30px;
+		margin-bottom: 30px;
+		margin-top: 30px;
 	}
 
+	.help-block{
+		p{
+			font-size: 1.25em;
+		}
+	}
+
+	p.centered{
+		text-align: center;
+		font-size: 1.25em;
+	}
+	
 	textarea,
 	input{
 		box-shadow: inherit;
@@ -37,7 +35,7 @@
 		border: none;
 		border-bottom: 2px solid #777;
 		background-color: #393f43;
-		font-size: 14px;
+		font-size: 20px;
 		border-radius: 0px;
 	}
 
@@ -53,7 +51,7 @@
 		padding-top: 10px;
 		padding-bottom: 10px;
 		margin-top: 10px;		
-		font-size: 14px;
+		font-size: 20px;
 		&:focus{
 			outline-color: transparent;
 		}
@@ -75,7 +73,6 @@
 
 	#contact-form {
 		margin: 0 auto;
-		margin-top: 15px;
 		width: 100%;
 		max-width: 960px;
 		padding-bottom: 40px;
