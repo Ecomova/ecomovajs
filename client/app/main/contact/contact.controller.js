@@ -2,23 +2,19 @@
 
 ecomova.controller('ContactCtrl',  ['$scope', 'ContactService',  function ($scope, ContactService) {  
     $scope.isValidField = function(fieldName){
-
-      return 
-        $scope.contactForm[fieldName].$dirty && 
+      return $scope.contactForm[fieldName].$dirty && 
         $scope.contactForm[fieldName].$valid;
     };
 
 
     $scope.isValidForm = function(){
-      return 
-        $scope.isValidField('name') &&
+      return $scope.isValidField('name') &&
         $scope.isValidField('email') &&
         $scope.isValidField('message');
     };
 
     $scope.isValidFormSubmitted = function(){
-      return 
-        $scope.isValidForm() &&
+      return $scope.isValidForm() &&
         $scope.contactForm.$submitted;
     };
  
@@ -50,7 +46,7 @@ ecomova.controller('ContactCtrl',  ['$scope', 'ContactService',  function ($scop
             console.log(greeting);
             $scope.showMessage(true);
           }, function(reason) {
-            console.log(reason)            
+            console.log(reason)  ;          
             $scope.contactForm.$error = { 
               'message' : 'Ocorreu um erro ao processar a solicitacação. Por favor, tente mais tarde.',
             };

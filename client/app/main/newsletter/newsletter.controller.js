@@ -6,7 +6,9 @@ ecomova.controller('NewsletterCtrl', ['$scope', 'NewsletterService',  function (
   	};
   	
     $scope.showSuccessfullMessage = function(){
-  		return $scope.isFormSubmitted() && ( $scope.newsletterForm.$error === { } || $scope.newsletterForm.$error.length > 1);
+  		return $scope.isFormSubmitted() && 
+      ( $scope.newsletterForm.$error.message !== '' ||
+        typeof $scope.newsletterForm.$error.message  !== 'undefined');
   	};
   	
     $scope.showErrorMessage = function(){
@@ -31,7 +33,7 @@ ecomova.controller('NewsletterCtrl', ['$scope', 'NewsletterService',  function (
         $scope.newsletterForm.$error = { };
         NewsletterService.registerEmail({ 'email': $scope.user.email })
           .$promise.then(function(greeting) {
-            console.log(greeting);
+            $scope.newsletterForm.$error = {};
           }, function(reason) {
             console.log(reason);
             $scope.newsletterForm.$error = { 

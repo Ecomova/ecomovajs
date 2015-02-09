@@ -34,8 +34,8 @@ mailer.extend(app, {
   port: 465, // port for secure SMTP 
   transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts 
   auth: {
-    user: 'henrique.elias@ecomova.com',
-    pass: 'cobige@4'
+    user: 'ecomovaapp@gmail.com',
+    pass: 'poioiu098'
   }
 });
 

@@ -3,8 +3,7 @@
 /**
  * Removes server error when user updates input
  */
-angular.module('ecomovaJsApp')
-  .directive('mongooseError', function () {
+ecomova.directive('mongooseError', function () {
     return {
       restrict: 'A',
       require: 'ngModel',

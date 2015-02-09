@@ -1,16 +1,18 @@
 'use strict';
 
-var Newsletter = require('./newsletter.model')
+var _ = require('lodash');
+var Newsletter = require('./newsletter.model');
 
-var validationError = function(res, err) {
-  return res.json(422, err);
-};
-
-exports.register = function (req, res, next) {
-  var newRegister = new Newsletter(req.body);
-  debugger;
-  newRegister.save(function(err, user) {
-    if (err) return validationError(res, err);
-    res.send(200);
+// Creates a new newsletter in the DB.
+exports.create = function(req, res) {
+  Newsletter.create(req.body, function(err, newsletter) {
+    if(err) { return handleError(res, err); }
+    return res.json(201, newsletter);
   });
 };
+
+
+
+function handleError(res, err) {
+  return res.send(500, err);
+}

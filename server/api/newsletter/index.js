@@ -1,10 +1,10 @@
 'use strict';
 
 var express = require('express'),
-	controller = require('./user.controller'),
+	controller = require('./newsletter.controller'),
 	router = express.Router();
 	
-router.post('/newsletter', controller.register);
+router.post('/', controller.create);
 
 module.exports = router;
 
