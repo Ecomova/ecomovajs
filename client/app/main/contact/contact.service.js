@@ -2,7 +2,7 @@
 
 ecomova.service('ContactService', ['$resource',
 	function NewsletterService($resource) {
-		return $resource('/contact', null, {
+		return $resource('/api/contacts', null, {
 			'sendMessage': {
 				method: 'POST'
 			}	

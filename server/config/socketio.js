@@ -18,9 +18,9 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/contact/contact.socket').register(socket);
   require('../api/newsletter/newsletter.socket').register(socket);
-  require('../api/thing/thing.socket').register(socket);
-}
+  }
 
 module.exports = function (socketio) {
   // socket.io (v1.x.x) is powered by debug.

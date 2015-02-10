@@ -32,7 +32,7 @@ ecomova.controller('NewsletterCtrl', ['$scope', 'NewsletterService',  function (
       if ($scope.newsletterForm.$valid) {
         $scope.newsletterForm.$error = { };
         NewsletterService.registerEmail({ 'email': $scope.user.email })
-          .$promise.then(function(greeting) {
+          .$promise.then(function() {
             $scope.newsletterForm.$error = {};
           }, function(reason) {
             console.log(reason);

@@ -41,7 +41,7 @@ ecomova.controller('ContactCtrl',  ['$scope', 'ContactService',  function ($scop
       if ($scope.contactForm.$valid) {
         $scope.clearMessage();
         $scope.contactForm.$error = { };
-        ContactService.sendMessage({ 'contact': $scope.user })
+        ContactService.sendMessage($scope.user)
           .$promise.then(function(greeting) {
             console.log(greeting);
             $scope.showMessage(true);
