@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('ecomovaJsApp')
-  .factory('User', function ($resource) {
+ecomova.factory('User', function ($resource) {
     return $resource('/api/users/:id/:controller', {
       id: '@_id'
     },

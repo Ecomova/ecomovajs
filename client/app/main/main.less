@@ -1,19 +1,45 @@
-#banner h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-}
+@import '../variables.less';
 
-.hero-unit {
-    position: relative;
-    padding: 30px 15px;
-    color: #F5F5F5;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    background: #4393B9;
-}
+/**
+ * App-wide Styles
+ */
 
+body{		
+	font-weight: 400;
+	font-family: 'Lato', sans-serif;
+	padding-top: 4.5em;
+	
+	.btn{
+		border-radius: 0em;
+		text-transform: uppercase;
+	}
 
-.after-navbar{
-    margin-top: 50px;
+	.green-container{
+		background-color: #26bb9f;
+		min-height: 7em;
+	}
+
+	.empty-container-small{
+		min-height: 4.5em;
+	}
+
+	.title-container {		
+		text-align: center;
+
+		h3, h4{			
+			font-style: normal;
+			font-weight: 300;
+			color: #ddd;							
+		}
+
+		h3{
+			font-size: 2em;
+		}
+	}
+
+	section {
+		padding-top: 4.5em;
+		margin-top: -4.5em;
+	}
+
 }

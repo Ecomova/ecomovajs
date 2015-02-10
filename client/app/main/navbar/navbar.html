@@ -1,5 +1,5 @@
 <div class="navbar navbar-fixed-top navbar-ecomova" ng-controller="NavbarCtrl">
-  <div class="">
+  <div class="container navbar-ecomova-container">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
         <span class="sr-only">Toggle navigation</span>
@@ -12,15 +12,15 @@
     <div collapse="isCollapsed" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-            <a ng-href="{{item.link}}">{{item.title}}</a>
+            <a ng-click="collapse(true)" ng-href="{{item.link}}">{{item.title}}</a>
         </li>
-        
+       <!-- 
         <li ng-show="isAdmin()"><a href="/admin">Admin</a></li>
         <li ng-hide="isLoggedIn()" ><a href="/signup">Sign up</a></li>
         <li ng-hide="isLoggedIn()" ><a href="/login">Login</a></li>        
         <li ng-show="isLoggedIn()"><a href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>
         <li ng-show="isLoggedIn()"><a href="" ng-click="logout()">Logout</a></li>
-        
+        -->
       </ul>
     </div>
   </div>

@@ -1,0 +1,59 @@
+@import '../../variables.less';
+
+#jumbotron-container{
+
+	&.jumbotron{
+	 	background-color: white;
+	 	margin-bottom: 0em;
+	 	padding: 7em 2em 0em 2em;
+
+	 	h1,
+	 	h2,
+	 	h3,
+	 	h4,
+	 	h5{
+	 		font-weight: 300;
+	 		text-align: center;
+			@media (min-width: @screen-sm-min) { 
+				text-align: left;
+			}
+	 	}
+
+	 	h1{
+	 		font-size: 2.5em;
+	 		margin-bottom: 1em;
+	 	}
+
+
+		img.image-panel{
+			max-height: 685px;
+			float: right;
+			margin-right: 1em
+		}
+
+
+	 	.jumbotron-container-list{
+	 		.image-container{
+	 			margin: 0.2em 0em;
+	 			padding: 0em;
+	 			img{
+	 				max-height: 34em;
+					@media (min-width: @screen-sm-min) { 
+						margin: 0.5em 1em;		 	
+						float: left;
+						display: inline-block;
+						vertical-align: middle;						
+					}					
+	 			}
+
+ 				h3{
+		 			margin: 0.7em 0em 0.7em 0em;		 			
+		 			display: block;
+		 			vertical-align: middle;
+				}
+
+			}
+	 	}	
+	}
+ }
+

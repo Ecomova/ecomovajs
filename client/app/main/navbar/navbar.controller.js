@@ -1,16 +1,18 @@
 'use strict';
 
-angular.module('ecomovaJsApp')
-  .controller('NavbarCtrl', function ($scope, $location, Auth) {
+ecomova.controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
     },{
       'title': 'Como funciona',
-      'link': '#about'
+      'link': '#jumbotron-container'
+    },{
+      'title': 'Características',
+      'link': '#services-container'
     },{
       'title': 'Contato',
-      'link': '#contact'
+      'link': '#contact-container'
     }];
 
     $scope.isCollapsed = true;
@@ -18,12 +20,19 @@ angular.module('ecomovaJsApp')
     $scope.isAdmin = Auth.isAdmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
 
+    $scope.collapse = function(collapse) {
+       $scope.isCollapsed = collapse;
+    };
+
+
+
     $scope.logout = function() {
       Auth.logout();
       $location.path('/login');
     };
 
     $scope.isActive = function(route) {
-      return route === $location.path();
+      var path = $location.hash();
+      return (path === '' && route === '/') || (route === ('#'+ path));
     };
   });

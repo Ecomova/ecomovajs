@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('ecomovaJsApp')
-  .factory('Modal', function ($rootScope, $modal) {
+ecomova.factory('Modal', function ($rootScope, $modal) {
     /**
      * Opens a modal
      * @param  {Object} scope      - an object to be merged with modal's scope

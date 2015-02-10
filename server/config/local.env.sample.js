@@ -7,7 +7,7 @@
 
 module.exports = {
   DOMAIN:           'http://localhost:9000',
-  SESSION_SECRET:   'fullstack-secret',
+  SESSION_SECRET:   'ecomovajs-secret',
 
   FACEBOOK_ID:      'app-id',
   FACEBOOK_SECRET:  'secret',

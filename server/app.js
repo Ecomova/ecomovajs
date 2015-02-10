@@ -8,11 +8,11 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 var express = require('express');
-//var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 var config = require('./config/environment');
 
 // Connect to database
-//mongoose.connect(config.mongo.uri, config.mongo.options);
+mongoose.connect(config.mongo.uri, config.mongo.options);
 
 // Populate DB with sample data
 if(config.seedDB) { require('./config/seed'); }
@@ -20,10 +20,26 @@ if(config.seedDB) { require('./config/seed'); }
 // Setup server
 var app = express();
 var server = require('http').createServer(app);
+var mailer = require('express-mailer');
 var socketio = require('socket.io')(server, {
   serveClient: (config.env === 'production') ? false : true,
   path: '/socket.io-client'
 });
+
+ 
+mailer.extend(app, {
+  from: 'no-reply@ecomova.com',
+  host: 'smtp.gmail.com', // hostname 
+  secureConnection: true, // use SSL 
+  port: 465, // port for secure SMTP 
+  transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts 
+  auth: {
+    user: 'ecomovaapp@gmail.com',
+    pass: 'poioiu098'
+  }
+});
+
+
 require('./config/socketio')(socketio);
 require('./config/express')(app);
 require('./routes')(app);
