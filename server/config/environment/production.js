@@ -15,9 +15,6 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri:    process.env.MONGOLAB_URI ||
-            process.env.MONGOHQ_URL ||
-            process.env.OPENSHIFT_MONGODB_DB_URL+process.env.OPENSHIFT_APP_NAME ||
-            'mongodb://localhost/ecomovajs'
+    uri: 'mongodb://ecomova_admin:poioiu098@ds041671.mongolab.com:41671/ecomova_prd'
   }
 };
