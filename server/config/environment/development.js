@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/ecomovajs-dev'
+    uri: uri: 'mongodb://ecomova_admin:poioiu098@ds041671.mongolab.com:41671/ecomova_prd'
   },
 
   seedDB: true
