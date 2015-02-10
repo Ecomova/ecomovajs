@@ -663,4 +663,9 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+  
+  grunt.registerTask('heroku', [
+    'clean:dist',
+	'serve:dist'
+  ]);
 };
