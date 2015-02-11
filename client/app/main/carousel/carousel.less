@@ -4,7 +4,7 @@
  	.main-carousel{
  		margin: auto;
  		width: 100%;
- 		height: 50em;
+ 		min-height: 35em;
 	
 
 		&.background-cover{
@@ -14,12 +14,10 @@
 		}
  	}
 
- 	.carousel-caption{ 		
- 		height: 100%;
- 		bottom: 0px; 	
+ 	.carousel-caption{ 		 		
 		padding-top: 0px;
 		padding-bottom: 0px;
-		min-height: 500px;
+		margin-bottom: -40px;
 		@media (min-width: @screen-sm-min) { 
 			min-height: 550px;
 		}
@@ -33,8 +31,6 @@
 		}
  		
 		.carousel-row{
-			position: relative;
-			bottom: -30px;
 			@media (min-width: @screen-sm-min) { 
 				height: 100%;
 			}
@@ -56,25 +52,6 @@
 					font-weight: 500;
 					text-align: center;
 				}
-			}
-			.image-cover{
-				min-height: 500px;
-				margin-left: auto;
-				margin-right: auto;
-				@media (min-width: @screen-sm-min) { 
-					min-height: 550px;
-				}
-
-				@media (min-width: @screen-md-min) { 
-					min-height: 600px; 
-				}
-
-				@media (min-width: @screen-lg-min) { 
-					min-height: 700px;
-				}
-			}
-			.carousel-image{
-				padding: 0px;
 			}
 
 			.carousel-text{
