@@ -62,13 +62,15 @@
 
 				&:hover, 
 				&:focus {
-					background-color: @color-base;										
-					color: white;
+					border-bottom: 1px solid @color-base;
+					color: @color-base;
+					background-color: white;
+
 					@media (min-width: @screen-md-min) { 
-						-webkit-transition: all 0.9s ease;
-						-moz-transition: all 0.9s ease;
-						-o-transition: all 0.9s ease;
-						transition: all 0.9s ease;
+						-webkit-transition: all 0.5s linear;
+						-moz-transition: all 0.5s linear;
+						-o-transition: all 0.5s linear;
+						transition: all 0.5s linear;
 					}
 				}				
 
@@ -77,15 +79,16 @@
 			&.active{
 				a{
 					color: @color-base;
+					border-bottom: 1px solid @color-base;
 					@media (min-width: @screen-md-min) { 
-						-webkit-transition: all 0.9s ease;
-						-moz-transition: all 0.9s ease;
-						-o-transition: all 0.9s ease;
-						transition: all 0.9s ease;
+						-webkit-transition: all 0.9s ease-in-out;
+						-moz-transition: all 0.9s ease-in-out;
+						-o-transition: all 0.9s ease-in-out;
+						transition: all 0.9s ease-in-out;
 					}
 					&:hover, 
 					&:focus {
-						color: white;
+						color: @color-base;
 					}
 				}
 			}
