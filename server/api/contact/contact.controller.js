@@ -43,22 +43,7 @@ exports.create = function(req, res) {
       var Newsletter = require('./../newsletter/newsletter.model');
       Newsletter.create({'email': contact.email});
     }
-    debugger;
-    app.mailer.send('./../../views/email', {
-      to: 'henrique.elias@ecomova.com, gustavo.peconick@ecomova.com', // REQUIRED. This can be a comma delimited string just like a normal email to field.  
-      subject: 'Contact Web Site', // REQUIRED. 
-      otherProperty: contact // All additional properties are also passed to the template as local variables. 
-    }, function (err) {
-      debugger;
-      if (err) {
-
-        // handle error 
-        console.log(err);
-        res.send('There was an error sending the email');
-        return;
-      }
-      res.send('Email Sent');
-    });
+ 
 
     return res.json(201, contact);
   });
