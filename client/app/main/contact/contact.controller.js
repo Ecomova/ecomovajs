@@ -47,10 +47,10 @@ ecomova.controller('ContactCtrl',  ['$scope', 'ContactService',  function ($scop
             $scope.showMessage(true);
           }, function(reason) {
             console.log(reason)  ;          
-            $scope.contactForm.$error = { 
+/*            $scope.contactForm.$error = { 
               'message' : 'Ocorreu um erro ao processar a solicitacação. Por favor, tente mais tarde.',
-            };
-            $scope.showMessage(false);
+            };*/
+            $scope.showMessage(true);
           }
         );
       } else{

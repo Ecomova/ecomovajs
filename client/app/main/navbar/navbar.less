@@ -3,15 +3,23 @@
 .navbar-ecomova{
 	
 	background-color: rgba(255, 255, 255, 1);
-	padding: 10px 0px;
-	height: 90px;
+	padding: 10px 0px 0px 0px;
+	
+	@media (min-width: @screen-sm-min) { 
+		height: 90px;
+		padding: 10px 0px;
+	}
+
 	border-bottom: 0.1em solid #a3cd55;
 
 
 	
 	.navbar-ecomova-container{
 		height: 69px;	
-		margin-top: 10px;
+		@media (min-width: @screen-sm-min) { 
+			margin-top: 10px;
+		}		
+		
 		.navbar-collapse{
 			padding: 0px;
 			@media (min-width: @screen-sm-min) { 
@@ -27,8 +35,17 @@
 		}
 	}
 
+	.navbar-brand-ecomova{
+		margin: 8px 15px;
+
+		@media (min-width: @screen-sm-min) { 
+			margin: 0px;
+		}
+	}
+
 	.navbar-nav{
 		margin: 0px;
+		
 		li{
 			background-color: rgba(255, 255, 255, 0.95);
 
@@ -45,13 +62,14 @@
 
 				&:hover, 
 				&:focus {
-					background-color: @color-base;										
-					color: white;
+					border-bottom: 1px solid @color-base;
+					color: @color-base;
+					background-color: white;
 					@media (min-width: @screen-md-min) { 
-						-webkit-transition: all 0.9s ease;
-						-moz-transition: all 0.9s ease;
-						-o-transition: all 0.9s ease;
-						transition: all 0.9s ease;
+						-webkit-transition: all 0.5s linear;
+						-moz-transition: all 0.5s linear;
+						-o-transition: all 0.5s linear;
+						transition: all 0.5s linear;
 					}
 				}				
 
@@ -60,15 +78,17 @@
 			&.active{
 				a{
 					color: @color-base;
+					border-bottom: 1px solid @color-base;
+					background-color: white;
 					@media (min-width: @screen-md-min) { 
-						-webkit-transition: all 0.9s ease;
-						-moz-transition: all 0.9s ease;
-						-o-transition: all 0.9s ease;
-						transition: all 0.9s ease;
+						-webkit-transition: all 0.9s ease-in-out;
+						-moz-transition: all 0.9s ease-in-out;
+						-o-transition: all 0.9s ease-in-out;
+						transition: all 0.9s ease-in-out;
 					}
 					&:hover, 
 					&:focus {
-						color: white;
+						color: @color-base;
 					}
 				}
 			}

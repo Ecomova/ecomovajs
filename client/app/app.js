@@ -6,6 +6,7 @@ var ecomova = angular.module('ecomovaJsApp', [
   'ngResource',
   'ngSanitize',
   'btford.socket-io',
+  'ui.checkbox',
   'ui.router',
   'ui.bootstrap'
 ]);

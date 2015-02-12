@@ -3,10 +3,10 @@
 #contact-container{
 	color: #ddd;
 	background-color: #393f43;
-	padding: 6em 2em 2em 2em;
+	padding: 10em 0em;
+	margin-top: 0em;
 	
 	.title-container{
-		margin-top: 50px;
 		.services-title{
 			margin-top: -20px;
 		}
@@ -29,7 +29,8 @@
 	}
 	
 	textarea,
-	input{
+	input,
+	label{
 		box-shadow: inherit;
 		padding: 0;
 		color: #aaa;
@@ -38,6 +39,10 @@
 		background-color: #393f43;
 		font-size: 20px;
 		border-radius: 0px;
+	}
+
+	label{
+		border: none;
 	}
 
 	textarea {
@@ -76,12 +81,15 @@
 		margin: 0 auto;
 		width: 100%;
 		max-width: 960px;
-		padding-bottom: 40px;
 
 		p.contact-success-box {
 			color: #999;
 			font-size: 20px;
 			font-style: italic;
+		}
+
+		.form-group:last-of-type{
+			margin-top: 60px;
 		}
 	}
 
