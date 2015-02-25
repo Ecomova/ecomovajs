@@ -6,7 +6,7 @@ ecomova.controller('CarouselCtrl', [ '$scope', function ($scope) {
   		image: 'assets/images/iphone.png',
       background: 'assets/images/bg1.jpg',
   		text: 'todos os dias',
-  		header: 'Caronas para'
+  		header: 'Caronas'
   	},
   	{
   		image: 'assets/images/student.png',
