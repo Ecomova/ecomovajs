@@ -22,7 +22,7 @@
 	 	}
 
 		img.image-panel{
-			max-height: 685px;
+			max-height: 500px;
 			float: right;
 			margin-right: 1em
 		}
@@ -30,23 +30,29 @@
 
 	 	.jumbotron-container-list{
 	 		.image-container{
-	 			margin: 0.2em 0em;
-	 			padding: 0em;
 	 			img{
 	 				max-height: 34em;
+	 				float: left;
+	 				margin-right: 1em;
 					@media (min-width: @screen-sm-min) { 
-						margin: 0.5em 1em;		 	
-						float: left;
+						margin: 0.5em 1em;		 							
 						display: inline-block;
 						vertical-align: middle;						
 					}					
 	 			}
 
  				h3{
-		 			margin: 0.7em 0em 0.7em 0em;		 			
+		 			margin: 0.7em 0em 0.7em 0.5em;		 			
 		 			display: block;
 		 			vertical-align: middle;
 		 			text-align: left;
+		 			
+
+					@media (min-width: @screen-lg-min) { 
+						float: left;
+					}
+
+					
 				}
 
 			}

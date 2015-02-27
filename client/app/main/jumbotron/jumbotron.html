@@ -11,9 +11,11 @@
     </div>
     <div class="col-xs-12 col-md-6 jumbotron-container-list">    	
       <div ng-repeat="item in items" class="row">
-        <div class="col-xs-12 image-container">
+        <div class="col-xs-12">
+          <div class="image-container">            
             <img class="" src="{{item.image}}"/>
             <h3>{{item.text}}</h3>
+          </div>            
         </div>
       </div>
     </div>
