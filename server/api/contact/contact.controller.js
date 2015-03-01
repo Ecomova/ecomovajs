@@ -2,21 +2,7 @@
 
 var _ = require('lodash');
 var Contact = require('./contact.model');
-var app = require('express')();
-var mailer = require('express-mailer');
 
- 
-mailer.extend(app, {
-  from: 'no-reply@ecomova.com',
-  host: 'smtp.gmail.com', // hostname 
-  secureConnection: true, // use SSL 
-  port: 465, // port for secure SMTP 
-  transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts 
-  auth: {
-    user: 'ecomovaapp@gmail.com',
-    pass: 'poioiu098'
-  }
-});
 
 // Get list of contacts
 exports.index = function(req, res) {
@@ -43,8 +29,22 @@ exports.create = function(req, res) {
       var Newsletter = require('./../newsletter/newsletter.model');
       Newsletter.create({'email': contact.email});
     }
- 
+    res.mailer.send('email', {
+      to: 'henrique.elias@ecomova.com,gustavo.peconick@gmail.com',
+      subject: 'Ecomova - Contato',
+      name: contact.name,
+      email: contact.email,
+      message: contact.message,
+      newsletter: contact.newsletter
 
+        contact: contact
+      
+    }, function (err) {
+      if (err) {
+        // handle error 
+        console.log(err);       
+      }
+    });
     return res.json(201, contact);
   });
 };
