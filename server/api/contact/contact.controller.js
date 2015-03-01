@@ -36,9 +36,6 @@ exports.create = function(req, res) {
       email: contact.email,
       message: contact.message,
       newsletter: contact.newsletter
-
-        contact: contact
-      
     }, function (err) {
       if (err) {
         // handle error 
