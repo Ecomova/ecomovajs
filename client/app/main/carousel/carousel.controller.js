@@ -1,12 +1,12 @@
 'use strict';
 
 ecomova.controller('CarouselCtrl', [ '$scope', function ($scope) {
-    $scope.interval = 20000;
+    $scope.interval = 1800;
   	$scope.slides = [{
   		image: 'assets/images/iphone.png',
       background: 'assets/images/bg1.jpg',
   		text: 'todos os dias',
-  		header: 'Caronas para'
+  		header: 'Caronas'
   	},
   	{
   		image: 'assets/images/student.png',
