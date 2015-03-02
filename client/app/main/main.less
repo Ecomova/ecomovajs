@@ -4,7 +4,14 @@
  * App-wide Styles
  */
 
+
+html,body{
+	height: 100%;
+}
+
 body{		
+	font-size: 14px;
+	padding-top: 5.7em;
 	font-weight: 400;
 	font-family: 'Lato', sans-serif;
 	
@@ -15,20 +22,39 @@ body{
 
 	.green-container{
 		background-color: #26bb9f;
-		min-height: 9em;
+		min-height: 7em;
 	}
 
 	.title-container {		
 		text-align: center;
+		p.title{
+	 		font-size: 36px;
+	 		font-weight: 300;
+	 		font-style: normal;
+	 		margin-bottom: 0px;
+	 	}
 
-		h3, h4{			
-			font-style: normal;
-			font-weight: 300;
-			color: #ddd;							
+	}
+
+	@media (min-width: @screen-sm-min) {  
+		font-size: 16px;
+	}
+
+	@media (min-width: @screen-md-min) { 
+		font-size: 17px;
+		padding-top: 4em;
+		section {
+			padding-top: 4em;
+			margin-top: -4em;
 		}
+	}
 
-		h3{
-			font-size: 2em;
+	@media (min-width: @screen-lg-min) { 
+		font-size: 21px;
+		padding-top: 4em;
+		section {
+			padding-top: 4em;
+			margin-top: -4em;
 		}
 	}
 
