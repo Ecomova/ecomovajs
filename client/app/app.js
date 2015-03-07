@@ -1,6 +1,7 @@
 'use strict';
 
 var ecomova = angular.module('ecomovaJsApp', [
+  'angularHideHeader',
   'ngCookies',
   'ngMessages',
   'ngResource',
