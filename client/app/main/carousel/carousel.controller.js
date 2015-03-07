@@ -1,7 +1,7 @@
 'use strict';
 
 ecomova.controller('CarouselCtrl', [ '$scope', function ($scope) {
-    $scope.interval = 1800;
+    $scope.interval = 3000;
   	$scope.slides = [{
       animatedCssClass: 'zoomIn',
   		image: 'assets/images/iphone.png',
@@ -10,14 +10,14 @@ ecomova.controller('CarouselCtrl', [ '$scope', function ($scope) {
   		header: 'Caronas'
   	},
   	{
-      animatedCssClass: 'fadeInUp',
+      animatedCssClass: 'zoomIn',
   		image: 'assets/images/student.png',
       background: 'assets/images/bg2.jpg',
   		text: 'a faculdade',
   		header: 'Caronas para'
   	},
   	{
-      animatedCssClass: 'fadeInRightBig',
+      animatedCssClass: 'zoomIn',
   		image: 'assets/images/businessman.png',
       background: 'assets/images/bg3.jpg',
   		text: 'o trabalho',
