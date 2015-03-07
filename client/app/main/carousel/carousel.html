@@ -5,11 +5,11 @@
         <div class="carousel-caption">
         	<div class="carousel-row">
         		<div class="col-xs-12 col-sm-6 carousel-text" >            
-          			<p class="first-line">{{slide.header}}</p>
-          			<p class="second-line">{{slide.text}}</p>
+          			<p class="first-line animated bounceInLeft">{{slide.header}}</p>
+          			<p class="second-line animated bounceInRight">{{slide.text}}</p>
           	</div>	
             <div class="col-xs-12 col-sm-6" >            
-                <img class="img-responsive image-caroussel" ng-src="{{slide.image}}"/>
+                <img class="img-responsive image-caroussel animated {{slide.animatedCssClass}}" ng-src="{{slide.image}}"/>
             </div>  
           </div>
         </div>

@@ -1,12 +1,13 @@
 @import '../../variables.less';
 
 #carousel-container{
+
  	.main-carousel{
  		margin: auto;
  		width: 100%;
  		min-height: 500px;
 		&.background-cover{		
-			max-height: 900px;			
+			max-height: 600px;			
 		}
  	}
 
@@ -23,27 +24,16 @@
 			}
 			
 			.image-caroussel{
+				-webkit-transition-duration: 0.5s; /* Safari */
+				-moz-transition-duration: 0.5s;
+				-o-transition-duration: 0.5s;
+    			transition-duration: 0.5s;
 				margin-bottom: -40px;
 
 				@media (min-width: @screen-sm-min) { 
 					margin-bottom: -50px;
 					height: 100%;
 					display: inline;
-				}
-			}
-
-			p{
-				font-size: 3.2em;
-
-				&.first-line{
-					font-weight: 350;
-					text-align: center;
-					margin-bottom: 0px;
-
-				}
-				&.second-line{
-					font-weight: 300;
-					text-align: center;
 				}
 			}
 
@@ -55,7 +45,20 @@
 				}
 				p{
 					text-align: center;
+					font-size: 3.2em;
+					&.first-line{
+						font-weight: 350;
+						text-align: center;
+						margin-bottom: 0px;					
+					}
+					&.second-line{
+						font-weight: 300;
+						text-align: center;
+					}
+
+					
 				}
+
 			}
 		}
 	}
