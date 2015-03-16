@@ -1,7 +1,7 @@
 'use strict';
 
 ecomova.controller('CarouselCtrl', [ '$scope', function ($scope) {
-    $scope.interval = 3000;
+    $scope.interval = 3300;
   	$scope.slides = [{
       animatedCssClass: 'zoomIn',
   		image: 'assets/images/iphone.png',

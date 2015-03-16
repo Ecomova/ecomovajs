@@ -64,7 +64,7 @@ ecomova.controller('ContactCtrl',  ['$scope', 'ContactService',  function ($scop
       'email': '',
       'name': '',
       'message': '',
-      'newsletter': false
+      'newsletter': truune
     };
     
     $scope.clearMessage();
