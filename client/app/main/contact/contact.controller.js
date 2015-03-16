@@ -46,7 +46,7 @@ ecomova.controller('ContactCtrl',  ['$scope', 'ContactService',  function ($scop
             console.log(greeting);
             $scope.showMessage(true);
           }, function(reason) {
-            console.log(reason)  ;          
+            console.log(reason);          
 /*            $scope.contactForm.$error = { 
               'message' : 'Ocorreu um erro ao processar a solicitacação. Por favor, tente mais tarde.',
             };*/
@@ -64,7 +64,7 @@ ecomova.controller('ContactCtrl',  ['$scope', 'ContactService',  function ($scop
       'email': '',
       'name': '',
       'message': '',
-      'newsletter': truune
+      'newsletter': true
     };
     
     $scope.clearMessage();
