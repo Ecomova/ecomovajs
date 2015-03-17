@@ -5,6 +5,5 @@ ecomova.service('ContactService', ['$resource',
 		return $resource('/api/contacts', null, {
 			'sendMessage': {
 				method: 'POST'
-			}	
-      });
+		}});
   	}]);
